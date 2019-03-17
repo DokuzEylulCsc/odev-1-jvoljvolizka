@@ -8,7 +8,9 @@ namespace Odev_1
     abstract class Asker
     {
         private Bolge koordinat;
-        public Bolge Koordinat { get { return koordinat; } }
+        public Bolge Koordinat { get { return koordinat; } set { koordinat = value; } }
+        public bool alive = true;
+        public UInt32 health = 100;
 
         // ..... //
 
@@ -16,6 +18,8 @@ namespace Odev_1
         public abstract void HaraketEt();
 
         public abstract void Bekle();
+
+        public abstract void Ates_et();
 
         // ..... //
 
