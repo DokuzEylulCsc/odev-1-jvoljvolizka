@@ -14,6 +14,11 @@ namespace Odev_1
             */
 
             Ermeydani meydan = new Ermeydani();
+            Console.WriteLine("---------------------------------");
+            meydan.haritaciz();
+            
+
+
             Console.ReadLine();
         }
     }

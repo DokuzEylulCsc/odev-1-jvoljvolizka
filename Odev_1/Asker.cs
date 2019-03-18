@@ -9,17 +9,18 @@ namespace Odev_1
     {
         private Bolge koordinat;
         public Bolge Koordinat { get { return koordinat; } set { koordinat = value; } }
-        public bool alive = true;
-        public UInt32 health = 100;
+        public bool alive;
+        public UInt32 health;
+        public String typeid;
 
         // ..... //
 
         //Abstract sınıfların implementasyonları çocuk sınıflarda gerçekleştirilmelidir.
-        public abstract void HaraketEt();
+        public abstract Bolge[,] HaraketEt(Bolge[,] harita);
 
         public abstract void Bekle();
 
-        public abstract void Ates_et();
+        public abstract void Ates_et(Bolge[,] harita);
 
         // ..... //
 

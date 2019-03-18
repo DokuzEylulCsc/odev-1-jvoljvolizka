@@ -67,44 +67,44 @@ namespace Odev_1
             else
             {
                 Bolge er0bolge = new Bolge();
-                er0bolge.X = 11;
-                er0bolge.Y = 13;
+                er0bolge.X = 12;
+                er0bolge.Y = 14;
                 takimkonum.Add(er0bolge);
                 birlik[0] = new Er(er0bolge); // daha iyi bir çözüm yolu olabilirdi 
 
                 Bolge er1bolge = new Bolge();
-                er1bolge.X = 12;
-                er1bolge.Y = 13;
+                er1bolge.X = 13;
+                er1bolge.Y = 14;
                 takimkonum.Add(er1bolge);
                 birlik[1] = new Er(er1bolge); // daha iyi bir çözüm yolu olabilirdi 
 
                 Bolge er2bolge = new Bolge();
-                er2bolge.X = 13;
-                er2bolge.Y = 13;
+                er2bolge.X = 14;
+                er2bolge.Y = 14;
                 takimkonum.Add(er2bolge);
                 birlik[2] = new Er(er2bolge); // daha iyi bir çözüm yolu olabilirdi 
 
                 Bolge er3bolge = new Bolge();
-                er3bolge.X = 14;
-                er3bolge.Y = 13;
+                er3bolge.X = 15;
+                er3bolge.Y = 14;
                 takimkonum.Add(er3bolge);
                 birlik[3] = new Er(er3bolge); // daha iyi bir çözüm yolu olabilirdi 
 
                 Bolge teg0bolge = new Bolge();
-                teg0bolge.X = 11;
-                teg0bolge.Y = 14;
+                teg0bolge.X = 13;
+                teg0bolge.Y = 15;
                 takimkonum.Add(teg0bolge);
                 birlik[4] = new Tegmen(teg0bolge);
 
                 Bolge teg1bolge = new Bolge();
-                teg1bolge.X = 13;
-                teg1bolge.Y = 14;
+                teg1bolge.X = 15;
+                teg1bolge.Y = 15;
                 takimkonum.Add(teg1bolge);
                 birlik[5] = new Tegmen(teg1bolge);
 
                 Bolge yuzbolge = new Bolge();
-                yuzbolge.X = 12;
-                yuzbolge.Y = 14;
+                yuzbolge.X = 14;
+                yuzbolge.Y = 15;
                 takimkonum.Add(yuzbolge);
                 birlik[6] = new Yuzbasi(yuzbolge);
             }

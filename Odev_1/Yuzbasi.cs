@@ -14,9 +14,10 @@ namespace Odev_1
             this.alive = true;
             this.Koordinat = koor;
             this.health = 100;
+            this.typeid = "Y";
         }
 
-        public override void Ates_et()
+        public override void Ates_et(Bolge[,] harita)
         {
             Console.WriteLine("totallynotaplaceholder");
         }
@@ -26,9 +27,10 @@ namespace Odev_1
             Console.WriteLine("yuz beklemede");
         }
 
-        public override void HaraketEt()
+        public override Bolge[,] HaraketEt(Bolge[,] harita)
         {
             Console.WriteLine("totallynotaplaceholder");
+            return harita;
         }
     }
 }
