@@ -54,7 +54,7 @@ namespace Odev_1
                         return harita;
                     }
                 }
-                else 
+                else if(Koordinat.Y == 0)
                 {
                     if ((Koordinat.X != 15 && harita[Koordinat.X + 1, Koordinat.Y] == null) )
                     {
@@ -94,7 +94,26 @@ namespace Odev_1
                     return harita;
                 }
             }
-            Console.WriteLine(this.Koordinat.X);
+
+            else if (harita[Koordinat.X, Koordinat.Y + 1] == null)
+            {
+                
+
+                    harita[Koordinat.X, Koordinat.Y] = null;
+                    Koordinat.Y = Koordinat.Y + 1;
+                    harita[Koordinat.X, Koordinat.Y] = Koordinat;
+                    harita[Koordinat.X, Koordinat.Y].asker = this;
+                    return harita;
+            }
+
+            else if (harita[Koordinat.X, Koordinat.Y - 1] == null)
+            {
+                    harita[Koordinat.X, Koordinat.Y] = null;
+                    Koordinat.Y = Koordinat.Y - 1;
+                    harita[Koordinat.X, Koordinat.Y] = Koordinat;
+                    harita[Koordinat.X, Koordinat.Y].asker = this;
+                    return harita;
+            }
             return harita;
             
            
