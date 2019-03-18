@@ -18,17 +18,17 @@ namespace Odev_1
 
         public override void Ates_et()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("totallynotaplaceholder");
         }
 
         public override void Bekle()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("totallynotaplaceholder");
         }
 
         public override void HaraketEt()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("totallynotaplaceholder");
         }
     }
 }

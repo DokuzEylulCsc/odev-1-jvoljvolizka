@@ -7,9 +7,17 @@ namespace Odev_1
 {
     class Ermeydani
     {
-        Bolge[,] harita = new Bolge[16, 16];
+        public Bolge[,] Harita { get; set; } = new Bolge[16, 16];
 
-        public Bolge[,] Harita { get { return harita; } set { harita = value; } }
+        public Ermeydani()
+        {
+            Takim takim1 = new Takim(true);
+            Takim takim2 = new Takim(false);
+
+            Console.WriteLine(takim1.takimkonum[0].X);
+            Console.WriteLine(takim2.takimkonum[0].X);
+
+        }
 
         // ..... //
     }
