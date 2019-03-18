@@ -9,12 +9,13 @@ namespace Odev_1
     {
         // ..... //
 
-        public Tegmen(Bolge koor)
+        public Tegmen(Bolge koor, String takim)
         {
             this.alive = true;
             this.Koordinat = koor;
             this.health = 100;
             this.typeid = "T";
+            this.takimid = takim;
         }
 
         public override void Ates_et(Bolge[,] harita)
@@ -32,10 +33,9 @@ namespace Odev_1
         public override Bolge[,] HaraketEt(Bolge[,] harita)
         {
 
-            if (harita[Koordinat.X, Koordinat.Y + 1] == null | harita[Koordinat.X, Koordinat.Y - 1] == null | harita[Koordinat.X + 1, Koordinat.Y] == null | harita[Koordinat.X - 1, Koordinat.Y] == null)
+            if ( (Koordinat.Y + 1 != 15 && harita[Koordinat.X, Koordinat.Y + 1] == null) | (Koordinat.X - 1 != 0 && harita[Koordinat.X, Koordinat.Y - 1] == null) |(Koordinat.X + 1 != 15 && harita[Koordinat.X + 1, Koordinat.Y] == null) | (Koordinat.Y - 1 != 0 && harita[Koordinat.X - 1, Koordinat.Y] == null))
             {
-                Random rnd = new Random();
-                int num = rnd.Next(4);
+
                 if (harita[Koordinat.X, Koordinat.Y + 1] == null)
                 {
                     harita[Koordinat.X, Koordinat.Y] = null;

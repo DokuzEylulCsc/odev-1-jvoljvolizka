@@ -10,8 +10,9 @@ namespace Odev_1
         private Bolge koordinat;
         public Bolge Koordinat { get { return koordinat; } set { koordinat = value; } }
         public bool alive;
-        public UInt32 health;
+        public int health;
         public String typeid;
+        public String takimid;
 
         // ..... //
 

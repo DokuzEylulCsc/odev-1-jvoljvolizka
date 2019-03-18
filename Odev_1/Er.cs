@@ -10,18 +10,50 @@ namespace Odev_1
 
         // ..... //
 
-        public Er(Bolge koor)
+        public Er(Bolge koor, String takim)
         {
             this.alive = true;
             this.Koordinat = koor;
             this.health = 100;
             this.typeid = "E";
+            this.takimid = takim;
         }
         
                 
         public override void Ates_et(Bolge[,] harita)
         {
-            Console.WriteLine("totallynotaplaceholder");
+            if (Koordinat.X + 1 != 15 && harita[Koordinat.X + 1, Koordinat.Y] != null && harita[Koordinat.X + 1, Koordinat.Y].asker.takimid != this.takimid)
+            {
+                int sal;
+                Random rnd = new Random();
+                int num = rnd.Next(3);
+                if (num == 0)
+                {
+                    sal = 5;
+                }
+                else if (num == 1)
+                {
+                    sal = 10;
+                }
+                else
+                {
+                    sal = 15;
+ 
+                }
+                int newcan = harita[Koordinat.X + 1, Koordinat.Y].asker.health - sal;
+                if (newcan < 0)
+                {
+                    Console.WriteLine(harita[Koordinat.X + 1, Koordinat.Y].asker.takimid + " takimindan " + harita[Koordinat.X + 1, Koordinat.Y].asker.typeid + " oldu" );
+                    harita[Koordinat.X + 1, Koordinat.Y] = null;
+
+
+                }
+                else
+                {
+                    harita[Koordinat.X + 1, Koordinat.Y].asker.health = newcan;
+                }
+            }
+            //Console.WriteLine("totallynotaplaceholder");
             
         }
 
