@@ -18,9 +18,133 @@ namespace Odev_1
             this.takimid = takim;
         }
 
+
         public override void Ates_et(Bolge[,] harita)
         {
-            Console.WriteLine("totallynotaplaceholder");
+            if (Koordinat.X + 3 != 15 && harita[Koordinat.X + 3, Koordinat.Y] != null && harita[Koordinat.X + 3, Koordinat.Y].asker.takimid != this.takimid)
+            {
+                int sal;
+                Random rnd = new Random();
+                int num = rnd.Next(3);
+                if (num == 0)
+                {
+                    sal = 20;
+                }
+                else if (num == 1)
+                {
+                    sal = 25;
+                }
+                else
+                {
+                    sal = 30;
+
+                }
+                int newcan = harita[Koordinat.X + 3, Koordinat.Y].asker.health - sal;
+                if (newcan < 0)
+                {
+                    Console.WriteLine(harita[Koordinat.X + 3, Koordinat.Y].asker.takimid + " takimindan " + harita[Koordinat.X + 3, Koordinat.Y].asker.typeid + " oldu");
+                    harita[Koordinat.X + 3, Koordinat.Y] = null;
+
+
+                }
+                else
+                {
+                    harita[Koordinat.X + 3, Koordinat.Y].asker.health = newcan;
+                }
+            }
+
+            else if (Koordinat.Y + 3 != 15 && harita[Koordinat.X, Koordinat.Y + 3] != null && harita[Koordinat.X, Koordinat.Y + 3].asker.takimid != this.takimid)
+            {
+                int sal;
+                Random rnd = new Random();
+                int num = rnd.Next(3);
+                if (num == 0)
+                {
+                    sal = 20;
+                }
+                else if (num == 1)
+                {
+                    sal = 25;
+                }
+                else
+                {
+                    sal = 30;
+
+                }
+                int newcan = harita[Koordinat.X, Koordinat.Y + 3].asker.health - sal;
+                if (newcan < 0)
+                {
+                    Console.WriteLine(harita[Koordinat.X, Koordinat.Y + 3].asker.takimid + " takimindan " + harita[Koordinat.X, Koordinat.Y + 3].asker.typeid + " oldu");
+                    harita[Koordinat.X, Koordinat.Y + 3] = null;
+
+                }
+                else
+                {
+                    harita[Koordinat.X, Koordinat.Y + 3].asker.health = newcan;
+                }
+            }
+            else if (Koordinat.X - 3 != 0 && harita[Koordinat.X - 3, Koordinat.Y] != null && harita[Koordinat.X - 3, Koordinat.Y].asker.takimid != this.takimid)
+            {
+                int sal;
+                Random rnd = new Random();
+                int num = rnd.Next(3);
+                if (num == 0)
+                {
+                    sal = 15;
+                }
+                else if (num == 1)
+                {
+                    sal = 25;
+                }
+                else
+                {
+                    sal = 30;
+
+                }
+                int newcan = harita[Koordinat.X - 2, Koordinat.Y].asker.health - sal;
+                if (newcan < 0)
+                {
+                    Console.WriteLine(harita[Koordinat.X - 2, Koordinat.Y].asker.takimid + " takimindan " + harita[Koordinat.X - 2, Koordinat.Y].asker.typeid + " oldu");
+                    harita[Koordinat.X - 2, Koordinat.Y] = null;
+
+
+                }
+                else
+                {
+                    harita[Koordinat.X - 2, Koordinat.Y].asker.health = newcan;
+                }
+            }
+
+            else if (Koordinat.Y - 3 != 15 && harita[Koordinat.X, Koordinat.Y - 3] != null && harita[Koordinat.X, Koordinat.Y - 3].asker.takimid != this.takimid)
+            {
+                int sal;
+                Random rnd = new Random();
+                int num = rnd.Next(3);
+                if (num == 0)
+                {
+                    sal = 15;
+                }
+                else if (num == 1)
+                {
+                    sal = 25;
+                }
+                else
+                {
+                    sal = 30;
+
+                }
+                int newcan = harita[Koordinat.X, Koordinat.Y - 3].asker.health - sal;
+                if (newcan < 0)
+                {
+                    Console.WriteLine(harita[Koordinat.X, Koordinat.Y - 3].asker.takimid + " takimindan " + harita[Koordinat.X, Koordinat.Y - 3].asker.typeid + " oldu");
+                    harita[Koordinat.X, Koordinat.Y - 3] = null;
+
+                }
+                else
+                {
+                    harita[Koordinat.X, Koordinat.Y - 3].asker.health = newcan;
+                }
+            }
         }
 
         public override void Bekle()

@@ -20,7 +20,7 @@ namespace Odev_1
 
         public override void Ates_et(Bolge[,] harita)
         {
-            if (Koordinat.X + 1 != 15 && harita[Koordinat.X + 1, Koordinat.Y] != null && harita[Koordinat.X + 1, Koordinat.Y].asker.takimid != this.takimid)
+            if (Koordinat.X + 1 != 15 && harita[Koordinat.X + 2, Koordinat.Y] != null && harita[Koordinat.X + 2, Koordinat.Y].asker.takimid != this.takimid)
             {
                 int sal;
                 Random rnd = new Random();
@@ -41,7 +41,7 @@ namespace Odev_1
                 int newcan = harita[Koordinat.X + 2, Koordinat.Y].asker.health - sal;
                 if (newcan < 0)
                 {
-                    Console.WriteLine(harita[Koordinat.X + 1, Koordinat.Y].asker.takimid + " takimindan " + harita[Koordinat.X + 2, Koordinat.Y].asker.typeid + " oldu");
+                    Console.WriteLine(harita[Koordinat.X + 2, Koordinat.Y].asker.takimid + " takimindan " + harita[Koordinat.X + 2, Koordinat.Y].asker.typeid + " oldu");
                     harita[Koordinat.X + 2, Koordinat.Y] = null;
 
 
@@ -73,7 +73,7 @@ namespace Odev_1
                 int newcan = harita[Koordinat.X, Koordinat.Y + 2].asker.health - sal;
                 if (newcan < 0)
                 {
-                    Console.WriteLine(harita[Koordinat.X, Koordinat.Y + 2].asker.takimid + " takimindan " + harita[Koordinat.X, Koordinat.Y + 1].asker.typeid + " oldu");
+                    Console.WriteLine(harita[Koordinat.X, Koordinat.Y + 2].asker.takimid + " takimindan " + harita[Koordinat.X, Koordinat.Y + 2].asker.typeid + " oldu");
                     harita[Koordinat.X, Koordinat.Y + 2] = null;
 
                 }
@@ -114,7 +114,7 @@ namespace Odev_1
                 }
             }
 
-            else if (Koordinat.Y - 2 != 15 && harita[Koordinat.X, Koordinat.Y - 2] != null && harita[Koordinat.X, Koordinat.Y - 1].asker.takimid != this.takimid)
+            else if (Koordinat.Y - 2 != 15 && harita[Koordinat.X, Koordinat.Y - 2] != null && harita[Koordinat.X, Koordinat.Y - 2].asker.takimid != this.takimid)
             {
                 int sal;
                 Random rnd = new Random();

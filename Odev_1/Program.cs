@@ -12,17 +12,23 @@ namespace Odev_1
             /*
              Örnek olması açısında iskelet kod hazır olarak verilmiştir. İmplementasyonunuz bunun üzerinden gerçekleştiriniz.
             */
-
+            //please why...
             Ermeydani meydan = new Ermeydani();
             Console.WriteLine("---------------------------------");
             meydan.haritaciz();
             
-
-            while(true)
+            int i = 0;
+            while(i != 6)
             {
-                meydan.takim1.Birlik[3].HaraketEt(meydan.Harita);
-                Console.WriteLine(" " + meydan.takim1.Birlik[3].Koordinat.X + " " + meydan.takim1.Birlik[3].Koordinat.Y);
+                meydan.takim1.Birlik[i].HaraketEt(meydan.Harita);
+                meydan.haritaciz();
+                i = i + 1;
             }
+
+
+            Console.ReadLine();
+
+
             
         }
     }
