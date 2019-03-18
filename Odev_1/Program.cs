@@ -23,7 +23,7 @@ namespace Odev_1
                 meydan.takim1.Birlik[3].HaraketEt(meydan.Harita);
                 Console.WriteLine(" " + meydan.takim1.Birlik[3].Koordinat.X + " " + meydan.takim1.Birlik[3].Koordinat.Y);
             }
-            Console.ReadLine();
+            
         }
     }
 }
