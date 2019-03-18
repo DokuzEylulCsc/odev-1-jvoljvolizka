@@ -23,7 +23,7 @@ namespace Odev_1
 
         public override void Bekle()
         {
-            Console.WriteLine("totallynotaplaceholder");
+            Console.WriteLine("yuz beklemede");
         }
 
         public override void HaraketEt()

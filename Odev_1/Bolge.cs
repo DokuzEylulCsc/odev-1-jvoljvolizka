@@ -11,6 +11,7 @@ namespace Odev_1
 
         public int Y { set; get; }
 
+        public Asker asker { set; get; } // wat?! o.O 
 
         // ..... //
 

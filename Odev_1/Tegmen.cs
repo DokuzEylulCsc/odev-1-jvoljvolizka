@@ -24,7 +24,7 @@ namespace Odev_1
 
         public override void Bekle()
         {
-            Console.WriteLine("totallynotaplaceholder");
+            Console.WriteLine("teg beklemede");
             // throw new NotImplementedException();
         }
 

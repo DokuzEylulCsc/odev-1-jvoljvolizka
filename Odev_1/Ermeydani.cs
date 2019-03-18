@@ -13,9 +13,31 @@ namespace Odev_1
         {
             Takim takim1 = new Takim(true);
             Takim takim2 = new Takim(false);
+            int z = 0;
 
-            Console.WriteLine(takim1.takimkonum[0].X);
-            Console.WriteLine(takim2.takimkonum[0].X);
+            foreach (Bolge i in takim1.takimkonum) {
+                Harita[i.X, i.Y] = i;
+                Harita[i.X, i.Y].asker = takim1.Birlik[z];
+                z = z + 1;
+            }
+            z = 0;
+            foreach (Bolge i in takim2.takimkonum)
+            {
+                Harita[i.X, i.Y] = i;
+                Harita[i.X, i.Y].asker = takim2.Birlik[z];
+                z = z + 1;
+            }
+
+            foreach (Bolge t in Harita)
+            {
+                if (t != null && t.asker != null)
+                {
+                    t.asker.Bekle();
+                }
+            }
+
+           // Console.WriteLine(takim1.Birlik[0].Koordinat.X);
+           // Console.WriteLine(takim2.Birlik[0].Koordinat.X);
 
         }
 

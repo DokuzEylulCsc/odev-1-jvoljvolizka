@@ -14,7 +14,7 @@ namespace Odev_1
 
         // ..... //
 
-        //Abstract sınıfların implementasyonları çoçuk sınıflarda gerçekleştirilmelidir.
+        //Abstract sınıfların implementasyonları çocuk sınıflarda gerçekleştirilmelidir.
         public abstract void HaraketEt();
 
         public abstract void Bekle();

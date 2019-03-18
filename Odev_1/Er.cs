@@ -26,7 +26,7 @@ namespace Odev_1
 
         public override void Bekle()
         {
-            Console.WriteLine("beklemede");
+            Console.WriteLine("er beklemede");
             
         }
 
